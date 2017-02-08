@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body_block %}
-    <a href="{% url 'rango:about' %}">Rango Homepage</a>
+    <a href="{% url 'rango:index' %}">Rango Homepage</a>
     <br /><br />
     <img width=500 src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
 
@@ -14,4 +14,6 @@
 
     <img width=500 src="{{ MEDIA_URL }}cat.jpg">
     <p>This cat is served from media... Honestly!</p>
+
+    <p>visits to Rango: {{ visits }}</p>
 {% endblock %}
