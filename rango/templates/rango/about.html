@@ -1,24 +1,17 @@
+{% extends 'rango/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
+{% block title_block %}
+    About
+{% endblock %}
 
-    <head>
-        <title>Rango</title>
-        
-        <!-- CSS -->
-<!--        <link rel="stylesheet" href="{% static "css/base.css" %}" />-->
-        <!-- JavaScript -->
-<!--        <script src="{% static "js/jquery.js" %}">-->
-    </head>
+{% block body_block %}
+    <a href="{% url 'rango:about' %}">Rango Homepage</a>
+    <br /><br />
+    <img width=500 src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
 
-    <body>
-        <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
-          
-        <p>This tutorial has been put together by Devdude!</p>
-        
-        <img width=500 src="{{ MEDIA_URL }}cat.jpg">
-        <p>This cat is served from media... Honestly!</p>
-    </body>
+    <p>This tutorial has been put together by Devdude!</p>
 
-</html>
+    <img width=500 src="{{ MEDIA_URL }}cat.jpg">
+    <p>This cat is served from media... Honestly!</p>
+{% endblock %}
